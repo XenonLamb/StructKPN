@@ -58,7 +58,7 @@ network:
   whichModel: KPN_S
   filterChannels: 88
   numBlocks: 24
-  KPNKernelSize: 19
+  KPNKernelSize: 21
   kernelWeightSoftmax: true
 
 #### training settings: learning rate scheme, loss
