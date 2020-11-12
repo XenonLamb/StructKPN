@@ -1,0 +1,85 @@
+# Not exactly the same as SRResNet in <Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network>
+# With 16 Residual blocks w/o BN
+
+#### general settings
+name: !!str poisson10_48_24_25
+
+#### datasets
+datasets:
+  name: LCTSC
+  synthesizeDataset: true
+  dicomDir: data/LCTSC
+  npyDir: data/LCTSC
+  syntheticSettings:
+    noiseName: Poisson
+    noiseLevel: 10.0
+  normalize: 
+    method: DicomStandardNormalize # ClipNormalize or Normalize or Clip2LungNormalize
+    RescaleSlope: 1.0
+    RescaleIntercept: -1024.0
+    c: 40.0
+    w: 400.0
+#### fdmean: 270.1626
+#### fdstd: 413.2266
+#### ldmean: 270.8705
+#### ldstd: 404.4441
+  train:
+    fileName: train_poisson_10.npz
+    shuffle: true
+    workers: 6  # per GPU
+    batchSize: 32
+    randomCrop: false
+    randomCropAfterNormalization: true
+    patchSize: 64
+    discardBlackPatches: 0.6 # if that many pixels are black, re-crop
+    horizontalFlip: true
+    verticalFlip: true
+    rot90: true
+  test:
+    fileName: test_poisson_10.npz
+    shuffle: false
+    batchSize: 1
+    workers: 6
+    debugBatch: [1,2,3]
+
+#### path
+path:
+  debugDir: images
+  tensorboardDir: tensorboard
+  ckptDir: checkpoints
+
+#### network structures
+network:
+  whichModel: KPN
+  filterChannels: 24
+  numBlocks: 24
+  KPNKernelSize: 25
+
+#### training settings: learning rate scheme, loss
+train:
+  optimizer: Adam # Adam or SGD
+  beta1: 0.9
+  beta2: 0.999
+  weight_decay: 0
+  
+  warmup_iter: -1  # no warm up
+
+  lr: !!float 1e-4
+  lr_scheme: epochReciprocal
+  lr_scheme_params:
+
+  criterion: l2 # l2 or l1
+  
+  evaluation: false
+  epochs: 50
+  start_epoch: 0
+  start_iter: 0
+  resume: false
+  ckptName: ckpt.t7
+  
+  valFreq: 10
+
+#### logger
+logger:
+  print_freq: 1
+  save_checkpoint_freq: -1

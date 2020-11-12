@@ -1,0 +1,16 @@
+setup.py
+/data/projects/SenseSR_v2/mfsr-pytorch/mfsr-pytorch/layers/region-selection-pytorch-master/region-selection-pytorch/region_selection_package/src/region_select.c
+/data/projects/SenseSR_v2/mfsr-pytorch/mfsr-pytorch/layers/region-selection-pytorch-master/region-selection-pytorch/region_selection_package/src/region_select_cuda.c
+region_selection_package/__init__.py
+region_selection_package.egg-info/PKG-INFO
+region_selection_package.egg-info/SOURCES.txt
+region_selection_package.egg-info/dependency_links.txt
+region_selection_package.egg-info/requires.txt
+region_selection_package.egg-info/top_level.txt
+region_selection_package/_ext/__init__.py
+region_selection_package/_ext/region_select/__init__.py
+region_selection_package/functions/__init__.py
+region_selection_package/functions/region_select.py
+region_selection_package/modules/__init__.py
+region_selection_package/modules/region_select.py
+test/test.py

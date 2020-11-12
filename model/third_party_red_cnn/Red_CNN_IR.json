@@ -1,0 +1,1166 @@
+{
+    "node": [
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "496"
+                                    }, 
+                                    {
+                                        "size": "496"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "input": [
+                "etlwise"
+            ], 
+            "name": "etRelu", 
+            "op": "Relu"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "500"
+                                    }, 
+                                    {
+                                        "size": "500"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }, 
+                "group": {
+                    "i": "1"
+                }, 
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "5", 
+                            "5", 
+                            "96", 
+                            "96"
+                        ]
+                    }
+                }, 
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0"
+                        ]
+                    }
+                }, 
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1", 
+                            "1", 
+                            "1", 
+                            "1"
+                        ]
+                    }
+                }, 
+                "use_bias": {
+                    "b": true
+                }
+            }, 
+            "input": [
+                "relu2"
+            ], 
+            "name": "conv3", 
+            "op": "Conv"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "504"
+                                    }, 
+                                    {
+                                        "size": "504"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }, 
+                "group": {
+                    "i": "1"
+                }, 
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "5", 
+                            "5", 
+                            "96", 
+                            "96"
+                        ]
+                    }
+                }, 
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0"
+                        ]
+                    }
+                }, 
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1", 
+                            "1", 
+                            "1", 
+                            "1"
+                        ]
+                    }
+                }, 
+                "use_bias": {
+                    "b": true
+                }
+            }, 
+            "input": [
+                "relu1"
+            ], 
+            "name": "conv2", 
+            "op": "Conv"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "508"
+                                    }, 
+                                    {
+                                        "size": "508"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }, 
+                "group": {
+                    "i": "1"
+                }, 
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "5", 
+                            "5", 
+                            "1", 
+                            "96"
+                        ]
+                    }
+                }, 
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0"
+                        ]
+                    }
+                }, 
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1", 
+                            "1", 
+                            "1", 
+                            "1"
+                        ]
+                    }
+                }, 
+                "use_bias": {
+                    "b": true
+                }
+            }, 
+            "input": [
+                "data"
+            ], 
+            "name": "conv1", 
+            "op": "Conv"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "492"
+                                    }, 
+                                    {
+                                        "size": "492"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }, 
+                "group": {
+                    "i": "1"
+                }, 
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "5", 
+                            "5", 
+                            "96", 
+                            "96"
+                        ]
+                    }
+                }, 
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0"
+                        ]
+                    }
+                }, 
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1", 
+                            "1", 
+                            "1", 
+                            "1"
+                        ]
+                    }
+                }, 
+                "use_bias": {
+                    "b": true
+                }
+            }, 
+            "input": [
+                "relu4"
+            ], 
+            "name": "conv5", 
+            "op": "Conv"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "496"
+                                    }, 
+                                    {
+                                        "size": "496"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }, 
+                "group": {
+                    "i": "1"
+                }, 
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "5", 
+                            "5", 
+                            "96", 
+                            "96"
+                        ]
+                    }
+                }, 
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0"
+                        ]
+                    }
+                }, 
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1", 
+                            "1", 
+                            "1", 
+                            "1"
+                        ]
+                    }
+                }, 
+                "use_bias": {
+                    "b": true
+                }
+            }, 
+            "input": [
+                "relu3"
+            ], 
+            "name": "conv4", 
+            "op": "Conv"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "496"
+                                    }, 
+                                    {
+                                        "size": "496"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "input": [
+                "relu4", 
+                "deconv5"
+            ], 
+            "name": "etlwise", 
+            "op": "Add"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "500"
+                                    }, 
+                                    {
+                                        "size": "500"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "input": [
+                "conv3"
+            ], 
+            "name": "relu3", 
+            "op": "Relu"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "504"
+                                    }, 
+                                    {
+                                        "size": "504"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "input": [
+                "conv2"
+            ], 
+            "name": "relu2", 
+            "op": "Relu"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "508"
+                                    }, 
+                                    {
+                                        "size": "508"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "input": [
+                "conv1"
+            ], 
+            "name": "relu1", 
+            "op": "Relu"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "512"
+                                    }, 
+                                    {
+                                        "size": "512"
+                                    }, 
+                                    {
+                                        "size": "1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "input": [
+                "data", 
+                "deconv1"
+            ], 
+            "name": "etlwise2", 
+            "op": "Add"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "492"
+                                    }, 
+                                    {
+                                        "size": "492"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "input": [
+                "conv5"
+            ], 
+            "name": "relu5", 
+            "op": "Relu"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "496"
+                                    }, 
+                                    {
+                                        "size": "496"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "input": [
+                "conv4"
+            ], 
+            "name": "relu4", 
+            "op": "Relu"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "504"
+                                    }, 
+                                    {
+                                        "size": "504"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "input": [
+                "etlwise1"
+            ], 
+            "name": "etRelu1", 
+            "op": "Relu"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "512"
+                                    }, 
+                                    {
+                                        "size": "512"
+                                    }, 
+                                    {
+                                        "size": "1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "input": [
+                "etlwise2"
+            ], 
+            "name": "etRelu2", 
+            "op": "Relu"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "504"
+                                    }, 
+                                    {
+                                        "size": "504"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "input": [
+                "relu2", 
+                "deconv3"
+            ], 
+            "name": "etlwise1", 
+            "op": "Add"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "512"
+                                    }, 
+                                    {
+                                        "size": "512"
+                                    }, 
+                                    {
+                                        "size": "1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }, 
+                "shape": {
+                    "shape": {
+                        "dim": [
+                            {
+                                "size": "-1"
+                            }, 
+                            {
+                                "size": "512"
+                            }, 
+                            {
+                                "size": "512"
+                            }, 
+                            {
+                                "size": "1"
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "name": "data", 
+            "op": "DataInput"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "508"
+                                    }, 
+                                    {
+                                        "size": "508"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }, 
+                "group": {
+                    "i": "1"
+                }, 
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "5", 
+                            "5", 
+                            "96", 
+                            "96"
+                        ]
+                    }
+                }, 
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0"
+                        ]
+                    }
+                }, 
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1", 
+                            "1", 
+                            "1", 
+                            "1"
+                        ]
+                    }
+                }, 
+                "use_bias": {
+                    "b": true
+                }
+            }, 
+            "input": [
+                "etRelu1"
+            ], 
+            "name": "deconv2", 
+            "op": "ConvTranspose"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "504"
+                                    }, 
+                                    {
+                                        "size": "504"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }, 
+                "group": {
+                    "i": "1"
+                }, 
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "5", 
+                            "5", 
+                            "96", 
+                            "96"
+                        ]
+                    }
+                }, 
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0"
+                        ]
+                    }
+                }, 
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1", 
+                            "1", 
+                            "1", 
+                            "1"
+                        ]
+                    }
+                }, 
+                "use_bias": {
+                    "b": true
+                }
+            }, 
+            "input": [
+                "derelu4"
+            ], 
+            "name": "deconv3", 
+            "op": "ConvTranspose"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "512"
+                                    }, 
+                                    {
+                                        "size": "512"
+                                    }, 
+                                    {
+                                        "size": "1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }, 
+                "group": {
+                    "i": "1"
+                }, 
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "5", 
+                            "5", 
+                            "1", 
+                            "96"
+                        ]
+                    }
+                }, 
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0"
+                        ]
+                    }
+                }, 
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1", 
+                            "1", 
+                            "1", 
+                            "1"
+                        ]
+                    }
+                }, 
+                "use_bias": {
+                    "b": true
+                }
+            }, 
+            "input": [
+                "derelu2"
+            ], 
+            "name": "deconv1", 
+            "op": "ConvTranspose"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "500"
+                                    }, 
+                                    {
+                                        "size": "500"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }, 
+                "group": {
+                    "i": "1"
+                }, 
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "5", 
+                            "5", 
+                            "96", 
+                            "96"
+                        ]
+                    }
+                }, 
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0"
+                        ]
+                    }
+                }, 
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1", 
+                            "1", 
+                            "1", 
+                            "1"
+                        ]
+                    }
+                }, 
+                "use_bias": {
+                    "b": true
+                }
+            }, 
+            "input": [
+                "etRelu"
+            ], 
+            "name": "deconv4", 
+            "op": "ConvTranspose"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "496"
+                                    }, 
+                                    {
+                                        "size": "496"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }, 
+                "group": {
+                    "i": "1"
+                }, 
+                "kernel_shape": {
+                    "list": {
+                        "i": [
+                            "5", 
+                            "5", 
+                            "96", 
+                            "96"
+                        ]
+                    }
+                }, 
+                "pads": {
+                    "list": {
+                        "i": [
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0", 
+                            "0"
+                        ]
+                    }
+                }, 
+                "strides": {
+                    "list": {
+                        "i": [
+                            "1", 
+                            "1", 
+                            "1", 
+                            "1"
+                        ]
+                    }
+                }, 
+                "use_bias": {
+                    "b": true
+                }
+            }, 
+            "input": [
+                "relu5"
+            ], 
+            "name": "deconv5", 
+            "op": "ConvTranspose"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "508"
+                                    }, 
+                                    {
+                                        "size": "508"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "input": [
+                "deconv2"
+            ], 
+            "name": "derelu2", 
+            "op": "Relu"
+        }, 
+        {
+            "attr": {
+                "_output_shapes": {
+                    "list": {
+                        "shape": [
+                            {
+                                "dim": [
+                                    {
+                                        "size": "-1"
+                                    }, 
+                                    {
+                                        "size": "500"
+                                    }, 
+                                    {
+                                        "size": "500"
+                                    }, 
+                                    {
+                                        "size": "96"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }, 
+            "input": [
+                "deconv4"
+            ], 
+            "name": "derelu4", 
+            "op": "Relu"
+        }
+    ]
+}

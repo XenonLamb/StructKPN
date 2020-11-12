@@ -1,0 +1,99 @@
+# Not exactly the same as SRResNet in <Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network>
+# With 16 Residual blocks w/o BN
+
+#### general settings
+name: !!str aapm_kpn_9621
+
+#### datasets
+datasets:
+  name: AAPM
+  format: 3mm # choices = [1mm, 3mm, proj]
+  buildNumpyDataset: false # build the .npy format (also pre-processed) dataset from .dicom files
+  group1: [L067, L096, L109, L143, L192] # train test split
+  group2: [L286, L291, L310, L333, L506]
+  group1Name: patient01234.npz
+  group2Name: patient56789.npz
+  dicomDir: data/AAPM
+  npyDir: data/AAPM
+  normalize: 
+# ClipNormalize or Normalize or Clip2LungNormalize or AlreadyNormalized
+# for AAPM, I have normalized the dataset already
+    method: AlreadyNormalized 
+# here are some parameters if you use Clip2LungNormalize
+####    RescaleSlope: 1.0
+####    RescaleIntercept: -1024.0
+####    c: 40.0
+####    w: 400.0
+  train:
+    fileName: patient01234.npz
+    shuffle: true
+    workers: 6
+    batchSize: 24
+    randomScale: false
+#    randomCrop: false
+    randomCropAfterNormalization: true 
+    patchSize: 64
+    discardBlackPatches: 0.6 # if that many pixels are black, re-crop
+    horizontalFlip: true
+    verticalFlip: true
+    rot90: true
+    noiseReduce: false # probably useless
+    noiseReduceMaxLevel: 0.5 
+  test:
+    fileName: patient56789.npz
+    shuffle: false
+    batchSize: 1
+    workers: 6
+    debugBatch: [1,2,3]
+
+#### path
+path:
+  debugDir: images
+  tensorboardDir: tensorboard
+  ckptDir: checkpoints
+
+#### network structures
+network:
+  whichModel: KPN
+  filterChannels: 96
+  numBlocks: 24
+  KPNKernelSize: 21
+  kernelWeightSoftmax: true
+
+#### training settings: learning rate scheme, loss
+train:
+  optimizer: Adam # Adam or SGD
+  beta1: 0.9 # Params for Adam
+  beta2: 0.999 # Params for Adam
+  weight_decay: 0 # Params for Adam
+#  momentum: 0 #SGD
+#  weight_decay: 0 #SGD
+#  dampening: 0 #SGD
+#  nesterov: false #SGD
+  warmup_iter: -1  # no warm up
+
+  lr: !!float 1e-4
+  lr_scheme: CosineAnnealingLR
+  lr_scheme_params:
+    T_max: 20
+# l2 or l1 or sobel or l1l2 or SMAPE or l1gl2i or asymmetricl1 or 
+# In my experiment, I found l1, l2, l1l2, asymmetricl1 (with small asymmetricSlope) work
+  criterion: asymmetricl1 
+  loss_param:
+#    l2ratio: !!float 1 #for l1l2, l1il2g
+    asymmetricSlope: !!float 5
+  
+  evaluation: false
+  epochs: 100
+  start_epoch: 0
+  start_iter: 0
+  resume: false
+  ckptName: ckpt.t7
+  
+  valFreq: 25
+
+#### logger
+logger:
+  print_freq: 1
+  save_checkpoint_freq: -1
+  save_best: False # save reconstruction results of the model of the last epoch or the model with best PSNR
