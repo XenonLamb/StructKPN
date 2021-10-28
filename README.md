@@ -35,8 +35,6 @@ DOSE dataset (Notice: the low-dose and full-dose images are not perfectly aligne
 CDE dataset (patient lung), store in `CDE` folder.
 
 
-Some scripts (`process_CDE.ipynb`,`process_phantom.ipynb`) are stored in the data directories for preprocessing the data.
-
 
 ## Train and Test
 
