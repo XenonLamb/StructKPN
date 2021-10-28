@@ -26,15 +26,13 @@ Download the AAPM dataset into `data` folder.
 
 The data used by the training and test script should be normalized and stored in .npz files.
 
-Our datasets (we will update the download link soon) include:
+The publicly available datasets include:
 
-AAPM-NIH public dataset (`patient01234.npz`,`patient56789.npz`)
+AAPM-NIH LDCT dataset 
 
-DOSE dataset (Notice: the low-dose and full-dose images are not perfectly aligned, only for qualitative comparison): stored in `bnm0xx-x-x.npz`
+DOSE dataset (Notice: the low-dose and full-dose images are not perfectly aligned, only for qualitative comparison): store in `bnm0xx-x-x.npz`
 
-PHANTOM dataset (body phantom), stored in `phantomxxkv_xxx_xxx_lungsec.npz`, raw data stored in `phantom` folder.
-
-CDE dataset (patient lung), stored in `CDE` folder.
+CDE dataset (patient lung), store in `CDE` folder.
 
 
 Some scripts (`process_CDE.ipynb`,`process_phantom.ipynb`) are stored in the data directories for preprocessing the data.
